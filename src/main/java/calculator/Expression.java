@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Expression {
     private final String text;
-    private static final Pattern CUSTOM_DELIMITER_PATTERN = Pattern.compile("//(.)\n(.*)");
+    private static final Pattern CUSTOM_DELIMITER_PATTERN = Pattern.compile("//(.)(?:\\\\n|\\n)(.*)");
     public Expression(String text) {
         this.text = text;
     }
