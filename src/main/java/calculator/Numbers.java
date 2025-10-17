@@ -1,19 +1,21 @@
 package calculator;
 
-import java.util.stream.Collector;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class Number {
+public class Numbers {
     private final List<PositiveNumber> numbers;
 
 
-    public Number(String[] stringNumbers) {
+    public Numbers(String[] stringNumbers) {
         this.numbers = Arrays.stream(stringNumbers)
                 .map(PositiveNumber::new)
-                .collect(Collector.toList());
+                .collect(Collectors.toList());
     }
 
     public int sum() {
-        return nubmer.stream()
+        return numbers.stream()
                 .mapToInt(PositiveNumber::value)
                 .sum();
     }

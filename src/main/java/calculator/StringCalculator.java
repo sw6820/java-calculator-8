@@ -1,9 +1,7 @@
 package calculator;
 
-import java.beans.Expression;
-
 public class StringCalculator {
-    public int sum(String text) {
+    public int add(String text) {
         if (text == null || text.isBlank()) {
             return 0;
         }
@@ -12,9 +10,9 @@ public class StringCalculator {
 
         String[] stringNumbers = expression.split();
 
-        Number number = new Number(stringNumbers);
+        Numbers numbers = new Numbers(stringNumbers);
 
-        return number.sum();
+        return numbers.sum();
 
     }
 

@@ -10,7 +10,7 @@ public class Application {
 
         try {
             StringCalculator calculator = new StringCalculator();
-            int result = calculator.sum(input);
+            int result = calculator.add(input);
             System.out.println("결과 : " + result);
 
         } catch(IllegalArgumentException e) {
